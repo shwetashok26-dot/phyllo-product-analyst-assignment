@@ -1,4 +1,3 @@
-
 # Phyllo Product Analyst Internship Assignment
 
 ## Orders API — Data Quality Review
@@ -11,34 +10,32 @@ The assignment focuses on reviewing Orders API responses, identifying data quali
 
 ### Tasks Completed
 
-#### 1. Data Quality Review
+1. Data Quality Review
 - Identified inconsistencies between API documentation and returned order data.
 - Reviewed incorrect order totals and monetary formats.
 - Identified pagination inconsistencies.
 - Checked missing customer information and undocumented order statuses.
 - Assessed the potential impact of each issue.
 
-#### 2. Revenue Analysis
+2. Revenue Analysis
 - Calculated the sum of supplied order totals as $328.03.
 - Identified limitations in treating this amount as definitive accounting revenue.
 - Highlighted the need to clarify refunded order treatment and incorrect order totals.
 
-#### 3. Bug Report
-Documented a pagination bug in the `/v1/orders` API:
-- Actual: `has_more: false` while another page exists.
-- Expected: `has_more: true` when additional orders are available.
+3. Bug Report
+- Documented a pagination bug in the /v1/orders API.
+- Actual: has_more: false while another page exists.
+- Expected: has_more: true when additional orders are available.
 - Impact: Clients may miss orders, resulting in incomplete revenue reports.
 
 ### Key Findings
 
-| Issue | Impact |
-|---|---|
-| Incorrect order total | Incorrect financial calculations |
-| Monetary format inconsistency | Potential unit misinterpretation |
-| Pagination inconsistency | Missing orders and incomplete datasets |
-| Missing customer email | Incomplete customer data |
-| Undocumented order status | Client handling issues |
-| Incorrect missing-order response | Unexpected API behavior |
+- Incorrect order total — Incorrect financial calculations.
+- Monetary format inconsistency — Potential unit misinterpretation.
+- Pagination inconsistency — Missing orders and incomplete datasets.
+- Missing customer email — Incomplete customer data.
+- Undocumented order status — Client handling issues.
+- Incorrect missing-order response — Unexpected API behavior.
 
 ### Most Serious Issue
 
